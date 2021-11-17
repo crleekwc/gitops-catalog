@@ -18,7 +18,3 @@ patches:
       - op: replace
         path: /spec/replicas
         value: 1
-      - op: add
-        path: /spec/storage/pvc/claim
-        value: {}
-

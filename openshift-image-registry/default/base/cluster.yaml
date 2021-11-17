@@ -15,5 +15,7 @@ spec:
     write:
       maxWaitInQueue: 0s
   rolloutStrategy: RollingUpdate
-  storage: {}
+  storage:
+    pvc:
+      claim:
   unsupportedConfigOverrides: null
