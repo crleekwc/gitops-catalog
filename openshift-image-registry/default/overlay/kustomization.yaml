@@ -13,7 +13,7 @@ patches:
         path: /spec/managementState
         value: 'Managed'
       - op: replace
-        path: /spec/rolloutstrategy
+        path: /spec/rolloutStrategy
         value: 'Recreate'
       - op: replace
         path: /spec/replicas
