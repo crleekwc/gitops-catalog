@@ -17,5 +17,5 @@ spec:
   rolloutStrategy: RollingUpdate
   storage:
     pvc:
-      claim: {}
+      claim:
   unsupportedConfigOverrides: null
