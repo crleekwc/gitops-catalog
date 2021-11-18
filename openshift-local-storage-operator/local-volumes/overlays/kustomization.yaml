@@ -4,7 +4,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 namespace: openshift-local-storage
 
 bases:
-  - ../../base
+  - ../base
 
 patches:
   - target:
