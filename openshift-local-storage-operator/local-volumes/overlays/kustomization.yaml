@@ -12,9 +12,6 @@ patches:
       name: local-storage
     patch: |-
       - op: replace
-        path: /spec/storageClassDevices/devicePaths
-        value: ["/dev/sdb"]
-      - op: replace
         path: /spec/storageClassDevices/storageClassName
         value: default
       - op: replace
