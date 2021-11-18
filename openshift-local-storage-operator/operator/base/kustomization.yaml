@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: openshift-local-storage-1
+namespace: openshift-operators
 
 commonAnnotations:
   argocd.argoproj.io/sync-wave: "0"
