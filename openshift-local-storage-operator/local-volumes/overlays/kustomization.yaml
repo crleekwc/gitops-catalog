@@ -12,15 +12,6 @@ patches:
       name: local-storage
     patch: |-
       - op: replace
-        path: /spec/storageClassDevices/storageClassName
-        value: default
-      - op: replace
-        path: /spec/storageClassDevices/fsType
-        value: xfs
-      - op: replace
-        path: /spec/storageClassDevices/voluemMode
-        value: Filesystem
-      - op: replace
         path: /spec/managementState
         value: Managed
       - op: replace
