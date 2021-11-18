@@ -1,0 +1,33 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+namespace: openshift-local-storage
+
+bases:
+  - ../../base
+
+patches:
+  - target:
+      kind: LocalVolume
+      name: local-storage
+    patch: |-
+      - op: replace
+        path: /spec/storageClassDevices/devicePaths
+        value: ["/dev/sdb"]
+      - op: replace
+        path: /spec/storageClassDevices/storageClassName
+        value: default
+      - op: replace
+        path: /spec/storageClassDevices/fsType
+        value: xfs
+      - op: replace
+        path: /spec/storageClassDevices/voluemMode
+        value: Filesystem
+      - op: replace
+        path: /spec/managementState
+        value: Managed
+      - op: replace
+        path: /spec/logLevel
+        value: Debug
+
+
