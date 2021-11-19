@@ -1,8 +1,17 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: helm-guestbook
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+---
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
   name: local-operator-group
   namespace: openshift-local-storage
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   targetNamespaces:
     - openshift-local-storage
@@ -12,6 +21,8 @@ kind: Subscription
 metadata:
   name: local-storage-operator
   namespace: openshift-local-storage
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   channel: "${OC_VERSION}"
   installPlanApproval: Automatic 
