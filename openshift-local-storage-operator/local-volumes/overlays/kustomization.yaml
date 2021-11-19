@@ -17,5 +17,11 @@ patches:
       - op: replace
         path: /spec/logLevel
         value: Debug
-
-
+      - op: replace
+        path: /spec/storageClassDevices
+        value:
+          - devicePaths:
+            - /dev/sdb
+            fsType: xfs
+            storageClassName: default
+            volumeMode: Filesystem
