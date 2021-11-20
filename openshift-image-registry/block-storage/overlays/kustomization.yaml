@@ -19,5 +19,5 @@ patches:
         path: /spec/replicas
         value: 1
       - op: add
-        path: /spec/pvc/claim
-        value:
+        path: /spec/storage
+        value: {pvc: {claim: 'openshift-image-registry'}}
