@@ -1,3 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: image-registry-storage 
+  namespace: openshift-image-registry
+spec:
+  accessModes:
+  - ReadWriteOnce 
+  resources:
+    requests:
+      storage: 100Gi
+---
 apiVersion: imageregistry.operator.openshift.io/v1
 kind: Config
 metadata:

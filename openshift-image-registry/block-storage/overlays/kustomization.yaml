@@ -20,4 +20,4 @@ patches:
         value: 1
       - op: add
         path: /spec/storage
-        value: {pvc: {claim: 'openshift-image-registry'}}
+        value: {pvc: {claim: 'image-registry-storage'}}
