@@ -4,16 +4,16 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 namespace: openshift-local-storage
 
 bases:
-  - ../base
+  - ../../base
 
 patches:
   - target:
       kind: LocalVolume
       name: local-storage
     patch: |-
-      - op: add
-        path: /metadata/annotations/storageclass.kubernetes.io~1is-default-class
-        value: true
+      - op: replace
+        path: /metadata/name
+        value: image-registry-local-storage
       - op: replace
         path: /spec/managementState
         value: Managed
@@ -26,5 +26,5 @@ patches:
           - devicePaths:
             - /dev/sdb
             fsType: xfs
-            storageClassName: default
+            storageClassName: image-registry
             volumeMode: Filesystem
