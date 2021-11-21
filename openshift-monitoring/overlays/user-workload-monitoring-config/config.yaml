@@ -1,0 +1,7 @@
+prometheus:
+  volumeClaimTemplate:
+    spec:
+      storageClassName: default
+      resources:
+        requests:
+          storage: 40Gi
